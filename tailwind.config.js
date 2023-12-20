@@ -30,6 +30,10 @@ module.exports = {
       black: "black",
       gray: "#B2BEB5",
       "review-colo": "#88030C",
+      transparent: "transparent",
+      "footer-bg": "#DCD1CD",
+      "footer-bg-2": "#A182764F",
+
       // gray: { #F7F5F4 }
       // background: #FFFFFF;
       // background: #E1CA96;

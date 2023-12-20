@@ -8,15 +8,29 @@ const footertexts3 = ["Home", "Our service", "FAQ"];
 
 const Footer = () => {
   return (
-    <footer className="bg-bg-2 flex flex-col items-center">
+    <footer className="bg-footer-bg-2 flex flex-col items-center">
       <div className="container bg-black p-6 text-bg-1 w-[85%]">
-        <div className="cove flex justify-between">
+        <div className="cove flex mb-8 justify-between p-4">
           <div className="dont-miss w-2/3">
-            <h2 className=" text-4xl p-4 w-[40%]"> <span className="pr-2">DON'T</span> MISS NEW LISTINGS</h2>
+            <h2 className=" text-4xl p-4 w-[40%]">
+              <span className="pr-2">DON'T</span> MISS NEW LISTINGS
+            </h2>
 
-            <form action="">
-              <input type="text" name="" placeholder="Enter your email" id="" />
-              <button type="submit"></button>
+            <form action="" className="flex justify-between w-[50%]">
+              <input
+                type="text"
+                name=""
+                placeholder="Enter your email"
+                id=""
+                className="p-3 rounded-full outline-none bg-transparent border border-bg-1 text-bg-1"
+                onChange={(e) => e}
+              />
+              <button
+                type="submit"
+                className=" rounded-md bg-bg-3 p-4 text-black"
+              >
+                GO
+              </button>
             </form>
           </div>
 
@@ -47,15 +61,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="line px-2 bg-bg-1">ee</div>
+        <div className="line mt-6 m-4 p-[0.2px] bg-footer-bg"></div>
 
-        <div className="sub-footer flex justify-between">
+        <div className="sub-footer flex justify-between items-center p-8">
           <div className="logo">
             <p className="title font-mtscript text-lg">R.O.N</p>
             <p className="title font-langar">Realtor Of Nigeria</p>
           </div>
 
-          <p>
+          <p className="w-[40%]">
             Mi id auctor non nunc bibndeum volutpat eleifend sed. Metus sit
             rhoncus aliquet in enim. Nunc nec gravida massa sed donec odio donec
             rutrum in.
