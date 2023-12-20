@@ -4,10 +4,10 @@ const Card = ({ cardData }) => {
   // const
 
   return (
-    <div className="card-container bg-yellow-400 grid grid-cols-2 justify-between gap-4">
+    <div className="card-container grid grid-cols-2 justify-between gap-4">
       {cardData.map((db) => {
         return (
-          <div className="card" key={cardData.indexOf(db)}>
+          <div className="card bg-bg-1" key={cardData.indexOf(db)}>
             <div className="bg-gray-500 rounded-tl-4xl rounded-br-4xl">
               <Image
                 src={`${db.img}`}
@@ -18,7 +18,7 @@ const Card = ({ cardData }) => {
               />
             </div>
 
-            <div className="texts p-2 bg-green-500">
+            <div className="texts p-2 bg-green-500 bg-bg-1 shadow-md md:w-[88%]">
               <h4 className="font-bold">{db.title}</h4>
               <div className="descr grid grid-cols-3">
                 {/* <div className="descr-con"> */}

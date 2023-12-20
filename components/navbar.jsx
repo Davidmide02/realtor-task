@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const { default: Link } = require("next/link");
 
 const Navbar = () => {
@@ -17,21 +19,28 @@ const Navbar = () => {
       </div>
 
       <div className="menu flex justify-between item-center">
-        <ul className="link flex justify-evenly items-center  border mr-2">
+        <ul className="link flex justify-evenly items-center mr-2">
           {links.map((link) => {
             return (
               <Link href={`${link.pageId}`} key={links.indexOf(link)}>
-                <li className="px-2 bg-bg-3 ">{link.link}</li>
+                <li className="px-2 hover:bg-bg-3">{link.link}</li>
               </Link>
             );
           })}
         </ul>
 
-        <div className="sign-search flex item-center justify-between border">
+        <div className="sign-search flex item-center justify-between">
           <button className=" bg-bg-btn rounded-full h-[60%] mt-2 px-4">
             Sign up
           </button>
           <button className="search px-2">Search Icon</button>
+          {/* <Image
+                src='/search.png'
+                width={10}
+                height={10}
+                alt="icon"
+            
+              /> */}
         </div>
       </div>
     </nav>
