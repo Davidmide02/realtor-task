@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { IoIosSearch } from "react-icons/io";
 
 const { default: Link } = require("next/link");
 
@@ -12,35 +12,32 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className=" bg-red-300 flex justify-between text-lg">
-      <div className="logo bg-green-300">
+    <nav className=" bg-red-300 flex justify-between text-2xl">
+      <div className="logo">
         <p className="title bg-green-300 font-mtscript text-lg">R.O.N</p>
         <p className="title font-langar">Realtor Of Nigeria</p>
       </div>
 
-      <div className="menu flex justify-between item-center">
-        <ul className="link flex justify-evenly items-center mr-2">
+      <div className="menu flex justify-between item-center w-[50%]">
+        <ul className="link flex justify-evenly items-center">
           {links.map((link) => {
             return (
               <Link href={`${link.pageId}`} key={links.indexOf(link)}>
-                <li className="px-2 hover:bg-bg-3">{link.link}</li>
+                <li className="px-2 hover:bg-bg-3 hover:rounded-full">
+                  {link.link}
+                </li>
               </Link>
             );
           })}
         </ul>
 
-        <div className="sign-search flex item-center justify-between">
-          <button className=" bg-bg-btn rounded-full h-[60%] mt-2 px-4">
+        <div className="sign-search flex justify-between items-center p-2 w-[30%]">
+          <button className="bg-bg-btn rounded-full mr-2 py-1 px-4 hover:bg-gray">
             Sign up
           </button>
-          <button className="search px-2">Search Icon</button>
-          {/* <Image
-                src='/search.png'
-                width={10}
-                height={10}
-                alt="icon"
-            
-              /> */}
+          <div className="search bg-gray ml-2 p-2 rounded-[50%] hover:cursor-pointer hover:bg-bg-btn">
+            <IoIosSearch />
+          </div>
         </div>
       </div>
     </nav>

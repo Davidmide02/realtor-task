@@ -5,6 +5,8 @@ import Card from "@/components/card";
 import Nextcount from "@/components/nextcount";
 import Pagewrapper from "@/components/pagewrapper";
 import Footer from "@/components/footer";
+import { GiSettingsKnobs } from "react-icons/gi";
+import { IoIosSearch } from "react-icons/io";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -140,25 +142,26 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="main py-2 px-4 mt-4 border font-lato">
+      <main className="main py-2 px-4 mt-4 font-lato">
         <Pagewrapper>
-          <section className="intro border flex items-center justify-between">
+          <section className="intro flex md:flex-row flex-col-reverse items-center justify-between">
             <div className="intro-text flex flex-col justify-between">
               <div className="text-4xl font-bold leading-10">
                 <p>
-                  Discover your dream{" "}
-                  <span className="text-bg-btn pb-2 mb-4">home</span>
+                  Discover your dream
+                  <span className="text-home-text-color pb-2 mb-4"> home</span>
                 </p>
-                <p>
-                  Where <span className="text-bg-btn">comfort</span> meets{" "}
-                  <span className="text-bg-btn">convenience</span>{" "}
+                <p className=" text-3xl mt-3">
+                  Where <span className="text-home-text-color">comfort</span>{" "}
+                  meets{" "}
+                  <span className="text-home-text-color">convenience</span>{" "}
                 </p>
               </div>
 
-              <div intro-text-image>
+              <div className="intro-text-image flex flex-col justify-center items-center">
                 <Image src={"/image 11.png"} width={400} height={300} />
                 <div className="btn">
-                  <button className="rent bg-black text-bg-1 px-6 py-2 rounded-full mr-2">
+                  <button className="rent bg-rent-color text-bg-1 px-6 py-2 rounded-full mr-2">
                     Rent
                   </button>
 
@@ -172,17 +175,28 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="intro-img">
-              <Image src={"/House.png"} width={500} height={500} />
+            <div className="intro-img relative">
+              {/* <div className="cir w-36 h-36 p-20 z-1 rounded-full bg-bg-grad right-0 absolute">
+               
+              </div> */}
+              <Image
+                src={"/House.png"}
+                width={500}
+                height={500}
+                className="z-0 bg-gradient-to-bl from-bg-grad"
+              />
             </div>
           </section>
         </Pagewrapper>
 
+        {/* bg-gradient-to-br from-transparent to-blue-300 */}
+
         {/* second section */}
         <Pagewrapper>
           <section className="second-section bg-bg-2 flex flex-col justify-center items-center">
-            <div className="search-v flex bg-bg-1 items-center p-4">
-              <div className="input p-2 flex border rounded-full border-black w-1/3 ">
+            <div className="search-v flex justify-between bg-bg-1 items-center p-8 w-[50%]">
+
+              <div className="input p-2 flex border rounded-full border-black w-1/3">
                 <Image
                   src={"/location.png"}
                   width={24}
@@ -197,8 +211,14 @@ export default function Home() {
                   className="p-2 w-[80%] bg-bg-1 outline-none"
                 />
               </div>
-              <div className="voice w-1/3">voice icon</div>
-              <div className="search w-1/3">search icon</div>
+
+              <div className="v bg-footer-bg rounded-md p-2">
+                <GiSettingsKnobs />
+              </div>
+            
+              <div className="search hover:bg-gray rounded-[50%] hover:cursor-pointer p-2 bg-bg-btn">
+                <IoIosSearch />
+              </div>
             </div>
 
             <div className="second-section-div flex justify-between p-4 w-[80%] gap-2">

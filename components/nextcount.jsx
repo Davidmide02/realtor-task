@@ -1,14 +1,24 @@
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+
 const Nextcount = () => {
   const counters = [1, 2, 3, 4];
   return (
-    <div className="btn-group float-right w-[30%] flex justify-between">
-      <button className="bg-bg-3 px-3">prev</button>
+    <div className="btn-group float-right w-[30%] p-4 flex justify-between">
+      <div className="bg-footer-bg p-3 hover:bg-counter-color hover:cursor-pointer">
+        <FaArrowLeft />
+      </div>
       {counters.map((counter) => (
-        <button key={counters.indexOf(counter)} className="bg-bg-3 py-1 hover:bg-bg-2 px-3">
+        <button
+          key={counters.indexOf(counter)}
+          className=" bg-counter-color py-1 hover:bg-footer-bg px-3"
+        >
           {counter}
         </button>
       ))}
-      <button className="bg-bg-3 px-3">next</button>
+
+      <div className="bg-footer-bg hover:bg-counter-color p-3 hover:cursor-pointer">
+        <FaArrowRight />
+      </div>
     </div>
   );
 };
