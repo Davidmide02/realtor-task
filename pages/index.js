@@ -172,9 +172,9 @@ export default function Home() {
                   <span className="text-home-text-color pb-2 mb-4"> home</span>
                 </p>
                 <p className=" text-3xl mt-3">
-                  Where <span className="text-home-text-color">comfort</span>{" "}
+                  Where <span className="text-home-text-color">comfort</span>
                   meets
-                  <span className="text-home-text-color">convenience</span>{" "}
+                  <span className="text-home-text-color">convenience</span>
                 </p>
               </div>
 
@@ -245,8 +245,8 @@ export default function Home() {
                     className="second-section-div  flex-col text-center"
                     key={secondSectionData.indexOf(db)}
                   >
-                    <h4 className=" text-2xl font-bold">{db.title}</h4>
-                    <p className=" font-normal">{db.descr}</p>
+                    <h4 className="text-2xl font-bold">{db.title}</h4>
+                    <p className="font-normal">{db.descr}</p>
                   </div>
                 );
               })}
@@ -338,8 +338,8 @@ export default function Home() {
 
         <Pagewrapper>
           <section className="trusted-partner p-4 mt-4">
-            <div className="text flex flex-col justify-center ">
-              <h4 className=" font-semibold text-lg text-center">
+            <div className="text flex flex-col justify-center">
+              <h4 className="font-semibold text-lg text-center">
                 Trusted partners
               </h4>
               <div className="logos flex justify-between">

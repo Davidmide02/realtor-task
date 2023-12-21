@@ -10,7 +10,7 @@ const Nextcount = () => {
       {counters.map((counter) => (
         <button
           key={counters.indexOf(counter)}
-          className=" bg-counter-color py-1 hover:bg-footer-bg px-3"
+          className="bg-counter-color py-1 hover:bg-footer-bg px-3"
         >
           {counter}
         </button>

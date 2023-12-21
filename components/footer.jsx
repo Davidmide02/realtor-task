@@ -27,7 +27,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className=" rounded-md bg-bg-3 p-4 text-black"
+                className="rounded-md bg-bg-3 p-4 text-black"
               >
                 GO
               </button>
@@ -38,7 +38,7 @@ const Footer = () => {
             <div className="first mb-2">
               <p className="mb-2">YOU CAN FIND US</p>
               {footertexts1.map((text) => (
-                <p key={footertexts1.indexOf(text)} className=" w-[40%]">
+                <p key={footertexts1.indexOf(text)} className="w-[40%]">
                   {text}
                 </p>
               ))}
