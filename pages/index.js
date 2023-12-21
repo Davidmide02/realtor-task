@@ -7,6 +7,7 @@ import Pagewrapper from "@/components/pagewrapper";
 import Footer from "@/components/footer";
 import { GiSettingsKnobs } from "react-icons/gi";
 import { IoIosSearch } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -136,8 +137,27 @@ const brands = [
 ];
 const subNavs1 = ["House", "Apartment"];
 const subNavs2 = ["Land", "View all"];
-// C:\Users\DAVIDMIDE\Desktop\realtor\public\next.svg
 
+const variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggeringChildren: 0.3,
+    },
+  },
+};
+
+const imageAni = {
+  hidden: { opacity: 0, x: 30 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 export default function Home() {
   return (
     <>
@@ -295,10 +315,15 @@ export default function Home() {
         <Pagewrapper>
           <section className="firth review p-4 mt-4 flex flex-col justify-center items-center">
             <h4 className=" p-4 text-lg font-semibold text-center">Reviews</h4>
-            <div className="contianer flex justify-between  w-[80%] align-middle px-4 py-8 bg-bg-3 rounded-lg">
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              whileInView="show"
+              className="contianer flex justify-between  w-[80%] align-middle px-4 py-8 bg-bg-3 rounded-lg"
+            >
               {revieWsTexts.map((review) => {
                 return (
-                  <div className="text-review-colo">
+                  <motion.div variants={imageAni} className="text-review-colo">
                     <Image
                       src={`${review.img}`}
                       width={50}
@@ -306,10 +331,10 @@ export default function Home() {
                       alt="img"
                     />
                     <p className="p-2">{review.text}</p>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
+            </motion.div>
           </section>
         </Pagewrapper>
 
