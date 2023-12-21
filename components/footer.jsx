@@ -55,7 +55,7 @@ const Footer = () => {
             <p className="mb-2">WHO ARE WE?</p>
             <div className="third">
               {footertexts3.map((text) => {
-                return <p>{text}</p>;
+                return <p key={footertexts3.indexOf(text)}>{text}</p>;
               })}
             </div>
           </div>

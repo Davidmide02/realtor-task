@@ -3,7 +3,7 @@ import { IoIosSearch } from "react-icons/io";
 const { default: Link } = require("next/link");
 
 const Navbar = () => {
-  // const links = [{'Home''#'}, 'Apartments', 'Services', 'About us']
+
   const links = [
     { link: "Home", pageId: "#" },
     { link: "Apartments", pageId: "#" },

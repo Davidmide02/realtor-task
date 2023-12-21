@@ -173,13 +173,13 @@ export default function Home() {
                 </p>
                 <p className=" text-3xl mt-3">
                   Where <span className="text-home-text-color">comfort</span>{" "}
-                  meets{" "}
+                  meets
                   <span className="text-home-text-color">convenience</span>{" "}
                 </p>
               </div>
 
               <div className="intro-text-image flex flex-col justify-center items-center">
-                <Image src={"/image 11.png"} width={400} height={300} />
+                <Image src={"/image 11.png"} width={400} height={300} alt="img"/>
                 <div className="btn">
                   <button className="rent bg-rent-color text-bg-1 px-6 py-2 rounded-full mr-2">
                     Rent
@@ -196,14 +196,12 @@ export default function Home() {
             </div>
 
             <div className="intro-img relative">
-              {/* <div className="cir w-36 h-36 p-20 z-1 rounded-full bg-bg-grad right-0 absolute">
-               
-              </div> */}
               <Image
                 src={"/House.png"}
                 width={500}
                 height={500}
                 className="z-0 bg-gradient-to-bl from-bg-grad"
+                alt="img"
               />
             </div>
           </section>
@@ -262,7 +260,7 @@ export default function Home() {
             <div className="sub-nav flex justify-between p-4">
               <ul className="sub-nav-links flex justify-between border-b-4 border-gray">
                 {subNavs1.map((navlink) => (
-                  <li className="link hover:border-b-2 text-lg hover:border-black hover:p-2 p-2">
+                  <li key={subNavs1.indexOf(navlink)} className="link hover:border-b-2 text-lg hover:border-black hover:p-2 p-2">
                     {navlink}
                   </li>
                 ))}
@@ -270,7 +268,7 @@ export default function Home() {
               <h4 className="px-2 font-bold text-lg">Featured homes</h4>
               <ul className="sub-nav-links flex justify-between border-b-4 border-gray">
                 {subNavs2.map((navlink) => (
-                  <li className="link hover:border-b-2 text-lg hover:border-black hover:p-2 p-2">
+                  <li key={subNavs2.indexOf(navlink)}  className="link hover:border-b-2 text-lg hover:border-black hover:p-2 p-2">
                     {navlink}
                   </li>
                 ))}
@@ -323,7 +321,7 @@ export default function Home() {
             >
               {revieWsTexts.map((review) => {
                 return (
-                  <motion.div variants={imageAni} className="text-review-colo">
+                  <motion.div key={revieWsTexts.indexOf(review)} variants={imageAni} className="text-review-colo">
                     <Image
                       src={`${review.img}`}
                       width={50}
@@ -353,6 +351,7 @@ export default function Home() {
                       height={100}
                       key={brands.indexOf(brand)}
                       className=""
+                      alt="img"
                     />
                   );
                 })}
