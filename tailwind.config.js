@@ -27,7 +27,18 @@ module.exports = {
       "bg-2": "#FFFFFF",
       "bg-3": "#E1CA96",
       "bg-btn": "#DF976E",
-      "black":"black"
+      black: "black",
+      gray: "#B2BEB5",
+      "review-colo": "#88030C",
+      transparent: "transparent",
+      "footer-bg": "#DCD1CD",
+      "footer-bg-2": "#A182764F",
+      "bg-grad": "#A0BFFA",
+      "rent-color": "#051107",
+      "home-text-color": "#FD7F3A",
+      "counter-color": "#E1743E0A",
+      // #FD7F3A
+
       // gray: { #F7F5F4 }
       // background: #FFFFFF;
       // background: #E1CA96;
