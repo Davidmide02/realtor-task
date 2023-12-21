@@ -3,7 +3,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 const Nextcount = () => {
   const counters = [1, 2, 3, 4];
   return (
-    <div className="btn-group float-right w-[30%] p-4 flex justify-between">
+    <div className="btn-group w-[30%] p-4 flex justify-between">
       <div className="bg-footer-bg p-3 hover:bg-counter-color hover:cursor-pointer">
         <FaArrowLeft />
       </div>

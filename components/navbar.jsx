@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className=" bg-red-300 flex justify-between text-2xl">
+    <nav className="flex p-2 justify-between text-2xl">
       <div className="logo">
         <p className="title bg-green-300 font-mtscript text-lg">R.O.N</p>
         <p className="title font-langar">Realtor Of Nigeria</p>

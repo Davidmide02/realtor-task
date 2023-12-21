@@ -8,7 +8,7 @@ const footertexts3 = ["Home", "Our service", "FAQ"];
 
 const Footer = () => {
   return (
-    <footer className="bg-footer-bg-2 flex flex-col items-center">
+    <footer className="bg-footer-bg-2 pb-10 flex flex-col items-center">
       <div className="container bg-black p-6 text-bg-1 w-[85%]">
         <div className="cove flex mb-8 justify-between p-4">
           <div className="dont-miss w-2/3">

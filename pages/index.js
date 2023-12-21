@@ -142,9 +142,9 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="main py-2 px-4 mt-4 font-lato">
+      <main className="main py-2 mt-4 font-lato">
         <Pagewrapper>
-          <section className="intro flex md:flex-row flex-col-reverse items-center justify-between">
+          <section className="intro flex md:flex-row px-4  flex-col-reverse items-center justify-between">
             <div className="intro-text flex flex-col justify-between">
               <div className="text-4xl font-bold leading-10">
                 <p>
@@ -193,9 +193,8 @@ export default function Home() {
 
         {/* second section */}
         <Pagewrapper>
-          <section className="second-section bg-bg-2 flex flex-col justify-center items-center">
+          <section className="second-section bg-bg-2 flex flex-col px-4 justify-center items-center">
             <div className="search-v flex justify-between bg-bg-1 items-center p-8 w-[50%]">
-
               <div className="input p-2 flex border rounded-full border-black w-1/3">
                 <Image
                   src={"/location.png"}
@@ -212,10 +211,10 @@ export default function Home() {
                 />
               </div>
 
-              <div className="v bg-footer-bg rounded-md p-2">
+              <div className="v bg-footer-bg hover:cursor-pointer hover:bg-bg-1 rounded-md p-2">
                 <GiSettingsKnobs />
               </div>
-            
+
               <div className="search hover:bg-gray rounded-[50%] hover:cursor-pointer p-2 bg-bg-btn">
                 <IoIosSearch />
               </div>
@@ -239,11 +238,11 @@ export default function Home() {
 
         {/* third section/subsection */}
         <Pagewrapper>
-          <section className="third-section">
+          <section className="third-section p-8 mt-4">
             <div className="sub-nav flex justify-between p-4">
               <ul className="sub-nav-links flex justify-between border-b-4 border-gray">
                 {subNavs1.map((navlink) => (
-                  <li className="link hover:border-b-2 text-lg hover: border-black hover:p-2 p-2">
+                  <li className="link hover:border-b-2 text-lg hover:border-black hover:p-2 p-2">
                     {navlink}
                   </li>
                 ))}
@@ -251,24 +250,23 @@ export default function Home() {
               <h4 className="px-2 font-bold text-lg">Featured homes</h4>
               <ul className="sub-nav-links flex justify-between border-b-4 border-gray">
                 {subNavs2.map((navlink) => (
-                  <li className="link hover:border-b-2 text-lg hover: border-black hover:p-2 p-2">
+                  <li className="link hover:border-b-2 text-lg hover:border-black hover:p-2 p-2">
                     {navlink}
                   </li>
                 ))}
               </ul>
             </div>
-
             <Card cardData={cardData} />
+            <div className="control flex w-[90%] justify-end">
+              <Nextcount />
+            </div>
           </section>
         </Pagewrapper>
 
-        {/* <Card/> */}
-
-        <Nextcount />
         <Pagewrapper>
-          <section className="fourth why-us  bg-bg-2 p-4  w-full">
+          <section className="fourth why-us bg-bg-2 mt-4 p-4">
             <h4 className="title p-4 text-center text-lg font-semibold">
-              WHy choose us?
+              Why choose us?
             </h4>
             <div className="flex justify-between">
               {whyUs.map((text) => {
@@ -295,7 +293,7 @@ export default function Home() {
         </Pagewrapper>
 
         <Pagewrapper>
-          <section className="firth review flex flex-col justify-center items-center">
+          <section className="firth review p-4 mt-4 flex flex-col justify-center items-center">
             <h4 className=" p-4 text-lg font-semibold text-center">Reviews</h4>
             <div className="contianer flex justify-between  w-[80%] align-middle px-4 py-8 bg-bg-3 rounded-lg">
               {revieWsTexts.map((review) => {
@@ -303,11 +301,11 @@ export default function Home() {
                   <div className="text-review-colo">
                     <Image
                       src={`${review.img}`}
-                      width={20}
-                      height={10}
+                      width={50}
+                      height={40}
                       alt="img"
                     />
-                    <p>{review.text}</p>
+                    <p className="p-2">{review.text}</p>
                   </div>
                 );
               })}
@@ -316,7 +314,7 @@ export default function Home() {
         </Pagewrapper>
 
         <Pagewrapper>
-          <section className="trusted-partner">
+          <section className="trusted-partner p-4 mt-4">
             <div className="text flex flex-col justify-center ">
               <h4 className=" font-semibold text-lg text-center">
                 Trusted partners
