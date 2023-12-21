@@ -1,16 +1,48 @@
 import Image from "next/image";
 import { PiCurrencyNgnBold } from "react-icons/pi";
 import Nextcount from "./nextcount";
+import { motion } from "framer";
+
+const variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggeringChildren: 0.3,
+    },
+  },
+};
+
+const imageAni = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 2,
+      delay:0.25
+    },
+  },
+};
 
 const Card = ({ cardData }) => {
   // const
 
   return (
     <div className="card-container flex flex-col items-center">
-      <div className="cont grid grid-cols-2">
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        whileInView={"show"}
+        className="cont grid grid-cols-2"
+      >
         {cardData.map((db) => {
           return (
-            <div className="card p-4 mb-2 bg-bg-1" key={cardData.indexOf(db)}>
+            <motion.div
+              variants={imageAni}
+              className="card p-4 mb-2 bg-bg-1"
+              key={cardData.indexOf(db)}
+            >
               <div className="bg-gray-500 rounded-tl-4xl rounded-br-4xl">
                 <Image src={`${db.img}`} width={543} height={427} alt="icon" />
               </div>
@@ -43,10 +75,10 @@ const Card = ({ cardData }) => {
                   })}
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };
