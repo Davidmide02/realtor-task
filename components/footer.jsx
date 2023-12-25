@@ -10,9 +10,9 @@ const Footer = () => {
   return (
     <footer className="bg-footer-bg-2 pb-10 flex flex-col items-center">
       <div className="container bg-black p-6 text-bg-1 w-[85%]">
-        <div className="cove flex mb-8 justify-between p-4">
+        <div className="cove flex flex-col items-center md:flex-row mb-8 md:justify-between p-4">
           <div className="dont-miss w-2/3">
-            <h2 className=" text-4xl p-4 w-[40%]">
+            <h2 className=" text-2xl md:text-4xl p-4 md:w-[40%]">
               <span className="pr-2">DON'T</span> MISS NEW LISTINGS
             </h2>
 
@@ -34,11 +34,11 @@ const Footer = () => {
             </form>
           </div>
 
-          <div className="you">
+          <div className="you text-center mt-4 md:mt-0 flex flex-col items-center">
             <div className="first mb-2">
-              <p className="mb-2">YOU CAN FIND US</p>
+              <p className="md:mb-2">YOU CAN FIND US</p>
               {footertexts1.map((text) => (
-                <p key={footertexts1.indexOf(text)} className="w-[40%]">
+                <p key={footertexts1.indexOf(text)} className="md:w-[40%]">
                   {text}
                 </p>
               ))}
@@ -63,8 +63,8 @@ const Footer = () => {
 
         <div className="line mt-6 m-4 p-[0.2px] bg-footer-bg"></div>
 
-        <div className="sub-footer flex justify-between items-center p-8">
-          <div className="logo">
+        <div className="sub-footer flex flex-col md:flex-row md:justify-between items-center p-8">
+          <div className="logo mb-4 md:mb-0">
             <p className="title font-mtscript text-lg">R.O.N</p>
             <p className="title font-langar">Realtor Of Nigeria</p>
           </div>

@@ -34,7 +34,7 @@ const Card = ({ cardData }) => {
         variants={variants}
         initial="hidden"
         whileInView={"show"}
-        className="cont grid grid-cols-2"
+        className="cont grid grid-cols-1 md:grid-cols-2"
       >
         {cardData.map((db) => {
           return (

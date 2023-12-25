@@ -179,7 +179,12 @@ export default function Home() {
               </div>
 
               <div className="intro-text-image flex flex-col justify-center items-center">
-                <Image src={"/image 11.png"} width={400} height={300} alt="img"/>
+                <Image
+                  src={"/image 11.png"}
+                  width={400}
+                  height={300}
+                  alt="img"
+                />
                 <div className="btn">
                   <button className="rent bg-rent-color text-bg-1 px-6 py-2 rounded-full mr-2">
                     Rent
@@ -260,7 +265,10 @@ export default function Home() {
             <div className="sub-nav flex justify-between p-4">
               <ul className="sub-nav-links flex justify-between border-b-4 border-gray">
                 {subNavs1.map((navlink) => (
-                  <li key={subNavs1.indexOf(navlink)} className="link hover:border-b-2 text-lg hover:border-black hover:p-2 p-2">
+                  <li
+                    key={subNavs1.indexOf(navlink)}
+                    className="link hover:border-b-2 text-lg hover:border-black hover:p-2 p-2"
+                  >
                     {navlink}
                   </li>
                 ))}
@@ -268,7 +276,10 @@ export default function Home() {
               <h4 className="px-2 font-bold text-lg">Featured homes</h4>
               <ul className="sub-nav-links flex justify-between border-b-4 border-gray">
                 {subNavs2.map((navlink) => (
-                  <li key={subNavs2.indexOf(navlink)}  className="link hover:border-b-2 text-lg hover:border-black hover:p-2 p-2">
+                  <li
+                    key={subNavs2.indexOf(navlink)}
+                    className="link hover:border-b-2 text-lg hover:border-black hover:p-2 p-2"
+                  >
                     {navlink}
                   </li>
                 ))}
@@ -286,11 +297,11 @@ export default function Home() {
             <h4 className="title p-4 text-center text-lg font-semibold">
               Why choose us?
             </h4>
-            <div className="flex justify-between">
+            <div className="flex flex-col items-center md:items-stretch md:flex-row md:justify-between">
               {whyUs.map((text) => {
                 return (
                   <div
-                    className="card-container rounded-md p-4 mr-2 bg-bg-1 w-80"
+                    className="card-container mb-2 rounded-md p-4 md:mr-2 bg-bg-1 w-80"
                     key={whyUs.indexOf(text)}
                   >
                     <Image
@@ -317,11 +328,15 @@ export default function Home() {
               variants={variants}
               initial="hidden"
               whileInView="show"
-              className="contianer flex justify-between  w-[80%] align-middle px-4 py-8 bg-bg-3 rounded-lg"
+              className="contianer flex flex-col md:flex-row justify-between  w-[80%] px-4 py-8 bg-bg-3 rounded-lg"
             >
               {revieWsTexts.map((review) => {
                 return (
-                  <motion.div key={revieWsTexts.indexOf(review)} variants={imageAni} className="text-review-colo">
+                  <motion.div
+                    key={revieWsTexts.indexOf(review)}
+                    variants={imageAni}
+                    className="text-review-colo"
+                  >
                     <Image
                       src={`${review.img}`}
                       width={50}
@@ -342,7 +357,7 @@ export default function Home() {
               <h4 className="font-semibold text-lg text-center">
                 Trusted partners
               </h4>
-              <div className="logos flex justify-between">
+              <div className="logos flex flex-wrap justify-between">
                 {brands.map((brand) => {
                   return (
                     <Image
